@@ -8,9 +8,17 @@ plugins {
 group = "com.maxjang"
 version = "1.0"
 
+// 버전 관리
+val kotlinVersion = "1.9.25"
+val springBootVersion = "3.4.1"
+val springDependencyManagementVersion = "1.1.7"
+val springdocVersion = "2.2.0"
+val javaVersion = 17
+val jsoupVersion = "1.18.3"
+
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(javaVersion)
     }
 }
 
@@ -22,8 +30,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
-    implementation("org.jsoup:jsoup:1.18.3")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:$springdocVersion")
+    implementation("org.jsoup:jsoup:$jsoupVersion")
 }
 
 kotlin {
