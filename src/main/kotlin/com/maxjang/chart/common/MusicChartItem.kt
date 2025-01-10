@@ -27,7 +27,4 @@ data class MusicChartItem(
 
     @Schema(description = "이전 차트 순위", example = "1")
     val previousRank: Int,
-
-    @Schema(description = "최고 순위", example = "1")
-    val topRank: Int
 )
