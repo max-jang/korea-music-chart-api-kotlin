@@ -25,7 +25,7 @@ class MusicChartController(
     @GetMapping("/{provider}/realtime")
     fun getRealTimeChart(
         @Parameter(
-            description = "음악 차트를 제공하는 제공자 (예: genie, melon)",
+            description = "음악 차트를 제공하는 제공자 (예: genie, melon, vibe, bugs)",
             example = "genie"
         )
         @PathVariable provider: String
@@ -50,6 +50,7 @@ class MusicChartController(
                 HttpStatus.OK
             )
         } catch (e: Exception) { // 에러 발생 시 예외 처리
+            e.printStackTrace()
             ResponseEntity(
                 MusicChartResponse(
                     code = 500,

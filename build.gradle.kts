@@ -14,7 +14,7 @@ val springBootVersion = "3.4.1"
 val springDependencyManagementVersion = "1.1.7"
 val springdocVersion = "2.2.0"
 val javaVersion = 17
-val jsoupVersion = "1.18.3"
+val playwrightVersion = "1.49.0"
 
 java {
     toolchain {
@@ -30,8 +30,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("com.microsoft.playwright:playwright:${playwrightVersion}")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:$springdocVersion")
-    implementation("org.jsoup:jsoup:$jsoupVersion")
 }
 
 kotlin {

@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.media.Schema
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Schema(description = "지니뮤직 차트 항목 데이터 모델")
 data class GenieChartItem(
-
     @JsonProperty("SONG_ID")
     @Schema(description = "곡 고유 번호", example = "32908826")
     val songId: String,
